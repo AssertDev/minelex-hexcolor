@@ -1,1 +1,76 @@
-<h1>Test</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <!--Font Google-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+   <link href="https://db.onlinewebfonts.com/c/320cca572227f02a57aa55f479564218?family=Minecraft" rel="stylesheet" type="text/css"/>
+   <!--CSS Boostrap-->
+   <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <!--CSS Style-->
+   <link href="./css/style.css" rel="stylesheet">
+   <!--Logo-->
+   <link rel="shortcut icon" href="./img/logo.png">
+   <title>MineLex | HexColor</title>
+</head>
+<body>
+   <nav>
+      <img src="img/logo.png" width="80px" height="80">
+      <ul>
+         <li><a href="http://tienda.minelex.club"><i class="fa-solid fa-cart-shopping"></i> TIENDA</a></li>
+         <li><a href="https://forms.gle/oY8t3iEJKQ8kEZjt6"><i class="fa-solid fa-users"></i> POSTULACIÓN</a></li>
+         <li><a href="http://discord.minelex.club"><i class="fa-brands fa-discord"></i> DISCORD</a></li>
+         <li><a style="color: var(--color-blanco);"><i class="fa-solid fa-palette"></i> HEXCOLOR</a></li>
+      </ul>
+      <a id="menu"><i class="fa-solid fa-bars"></i></a>
+   </nav>
+   <div id="nav-responsive-background">
+      <div id="nav-responsive-modal">
+         <div id="nav-responsive-header">
+            <img src="img/logo.png" width="80" height="80">
+            <p>Menú principal</p>
+            <i class="fa-solid fa-x" onclick="document.getElementById('nav-responsive-background').style='display: none;'"></i>
+         </div>
+         <ul>
+            <li><a class="no-active" href="http://tienda.minelex.club"><i class="fa-solid fa-cart-shopping"></i> TIENDA</a></li>
+            <li><a class="no-active" href="https://forms.gle/oY8t3iEJKQ8kEZjt6"><i class="fa-solid fa-users"></i> POSTULACIÓN</a></li>
+            <li><a class="no-active" href="http://discord.minelex.club"><i class="fa-brands fa-discord"></i> DISCORD</a></li>
+            <li><a class="active"><i class="fa-solid fa-palette"></i> HEXCOLOR</a></li>
+         </ul>
+      </div>
+   </div>
+   <main>
+      <div id="picker"></div>
+      <div class="modal">
+         <div class="background" id="color">
+            <p id="display">MineLex</p>
+            <img>
+            <b id="hexcolor">#272229</b>
+         </div>
+         <form class="background">
+            <label>Escribe tu nickname</label>
+            <input type="text" size="16" id="nickname">
+         </form>
+         <div class="btns-color">
+            <button class="btn-color" id="chatcolor">Chat</button>
+            <button class="btn-color" id="nickcolor">Nombre</button>
+            <button class="btn-color" id="emblemcolor">Emblema</button>
+            <button class="btn-color" id="pluscolor">ML+</button>
+         </div>
+      </div>
+   </main>
+   <div class="modal-background">
+      <div class="modal-copy">
+         <p class="modal-text"><i class="fa-solid fa-copy"></i> Comando copiado, pegalo en el chat del juego</p>
+         <button id="btn-back">Atrás</button>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+   <script src="./js/script.js"></script>
+   <script src="https://kit.fontawesome.com/633ab2ed9c.js" crossorigin="anonymous"></script>
+</body>
+</html>
