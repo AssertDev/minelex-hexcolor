@@ -1,0 +1,327 @@
+:root{
+    --color-primario: rgb(133, 1, 1);
+    --color-secundario: #121212;
+    --color-modal: #181818;
+    --color-rojo: rgb(196, 23, 23);
+    --color-rojo-claro: rgb(255, 103, 103);
+    --color-blanco: white;
+    --color-font-hover: rgb(155, 139, 139);
+    --color-input: rgb(29, 29, 29);
+    --color-background: rgba(4, 4, 4, 0.886);
+    --scroll-color: rgb(7, 6, 6);
+    --scrollbar-color: rgba(255, 255, 255, 0.123);
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    min-height: 100%;
+    height: 100%;
+  }
+  
+  body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-secundario);
+  }
+  
+  body::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--scroll-color);
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--scrollbar-color);
+  }
+  
+  nav{
+    background-color: var(--color-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav ul{
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  nav ul li{
+    list-style: none;
+    margin-left: 25px;
+  }
+  
+  nav ul li a{
+    color: var(--color-font-hover);
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .4s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover{
+    color: var(--color-rojo-claro);
+  }
+
+  #menu{
+    display: none;
+    color: var(--color-blanco);
+    font-size: 25px;
+  }
+  
+  main {
+    display: flex;
+    min-height: calc(100vh - 5rem);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal{
+    text-align: center;
+    background-color: var(--color-modal);
+    margin-left: 50px;
+  }
+  
+  .background{
+    width: 250px;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    background-color: var(--color-secundario);
+    color: white;
+  }
+  
+  .btn-copy{
+    margin-bottom: 30px;
+    padding: 12px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    font-size: 28px;
+    transition: all 0.4s;
+    border-style: none;
+    box-shadow: 0px 0px 15px var(--color-rojo);
+    cursor: pointer;
+  }
+  
+  .btn-copy:hover{
+    background-color: var(--color-primario);
+  }
+
+  #colorChoice{
+    height: 40px;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  #display{
+    font-family: "Minecraft";
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .label{
+    color: var(--color-blanco);
+    font-size: 20px;
+  }
+
+  form label{
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  form input{
+    background-color: var(--color-input);
+    color: var(--color-blanco);
+    font-size: 15px;
+    border-style: none;
+    outline: 0;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+  }
+
+  .modal-background{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .modal-copy{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #121212;
+  }
+
+  .modal-text{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-blanco);
+  }
+
+  .btns-color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .btn-color{
+    width: 250px;
+    padding: 5px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.15s;
+    border-style: none;
+    box-shadow: 0px 0px 10px var(--color-rojo);
+    cursor: pointer;
+  }
+  
+  .btn-color:hover{
+    background-color: var(--color-primario);
+  }
+
+  #btn-back{
+    margin: 30px 0px 0px 0px;
+    padding: 5px 20px 5px 20px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    font-size: 20px;
+    transition: all 0.4s;
+    border-style: none;
+    box-shadow: 0px 0px 15px var(--color-rojo);
+    cursor: pointer;
+  }
+  
+  #btn-back:hover{
+    background-color: var(--color-primario);
+  }
+
+  #nav-responsive-background{
+    background-color: #000000d7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  #nav-responsive-modal{
+    background-color: var(--color-modal);
+    width: 400px;
+    height: 100%;
+    animation: nav-responsive 1s;
+  }
+
+  @keyframes nav-responsive {
+    0% {transform: translateX(-500px);}
+    100% {transform: translateX(0px);}
+    
+  }
+
+  #nav-responsive-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--scrollbar-color) solid 1px;
+  }
+
+  #nav-responsive-header i{
+    color: var(--color-blanco);
+    padding: 20px;
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  #nav-responsive-header p{
+    font-size: 24px;
+    color: var(--color-blanco);
+    font-weight: bold;
+  }
+
+  #nav-responsive-header img{
+    margin-left: 30px;
+  }
+  
+  #nav-responsive-modal ul{
+    margin-top: 20px;
+  }
+
+  #nav-responsive-modal ul li{
+    list-style: none;
+    display: flex;
+    margin: 10px;
+  }
+
+ .active{
+    color: red !important;
+    background-color: #ff000017;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .no-active{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .no-active:hover{
+    background-color: #0000005d;
+  }
+
+  #nav-responsive-modal ul li a{
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+  @media only screen and (max-width: 760px){
+    main{
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+
+    .modal{
+      margin: 25px 0px 25px 0px;
+    }
+
+    #picker{
+      margin: 25px 0px 25px 0px;
+    }
+  }
+
+  @media only screen and (max-width: 680px){
+    nav{
+      justify-content: space-between;
+      padding: 0px 30px 0px 30px;
+    }
+
+    nav ul{
+      display: none;
+    }
+
+    #menu{
+      display: block;
+    }
+  }
+  
